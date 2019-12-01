@@ -1,0 +1,182 @@
+[2019-11-10 13:18:53] glpisqllog.ERROR: DBmysql::query() in /var/www/clients/client0/web1/web/maintCSPH/inc/dbmysql.class.php line 188
+  *** MySQL query error:
+  SQL: SELECT DISTINCT `glpi_tickets`.`id` AS id, 'normal' AS currentuser,
+                        `glpi_tickets`.`id` AS `ITEM_Ticket_2`,   `glpi_tickets`.`name` AS `ITEM_Ticket_1`,
+                        `glpi_tickets`.`id` AS `ITEM_Ticket_1_id`,
+                        `glpi_tickets`.`id` AS `ITEM_Ticket_1_id`, `glpi_tickets`.`content` AS `ITEM_Ticket_1_content`, `glpi_tickets`.`status` AS `ITEM_Ticket_1_status`, `glpi_tickets`.`status` AS `ITEM_Ticket_12`,  `glpi_tickets`.`date_mod` AS `ITEM_Ticket_19`,  `glpi_tickets`.`date` AS `ITEM_Ticket_15`,  `glpi_tickets`.`priority` AS `ITEM_Ticket_3`,   GROUP_CONCAT(DISTINCT `glpi_users_a5e2026cbcb683e774f93a59e24a62a4`.`id` SEPARATOR '$$##$$')
+                                       AS `ITEM_Ticket_4`,
+                           GROUP_CONCAT(DISTINCT CONCAT(`glpi_tickets_users_d1524bb2ea1d461ab90aed3b5f0e7e60`.`users_id`, ' ',
+                                                        `glpi_tickets_users_d1524bb2ea1d461ab90aed3b5f0e7e60`.`alternative_email`)
+                                                        SEPARATOR '$$##$$') AS `ITEM_Ticket_4_2`, 
+                            GROUP_CONCAT(DISTINCT `glpi_users_f201be21cd638ee780d08cba4ceff0d4`.`id` SEPARATOR '$$##$$')
+                                       AS `ITEM_Ticket_5`,
+                           GROUP_CONCAT(DISTINCT CONCAT(`glpi_tickets_users_819efb92c8b927b345e489211ec8e43b`.`users_id`, ' ',
+                                                        `glpi_tickets_users_819efb92c8b927b345e489211ec8e43b`.`alternative_email`)
+                                                        SEPARATOR '$$##$$') AS `ITEM_Ticket_5_2`, 
+                           `glpi_itilcategories`.`completename` AS `ITEM_Ticket_7`,  `glpi_tickets`.`time_to_resolve` AS `ITEM_Ticket_18`,  `glpi_tickets`.`status` AS `ITEM_Ticket_18_status`,  `glpi_users_users_id_recipient`.`name` AS `ITEM_Ticket_22`,
+                        `glpi_users_users_id_recipient`.`realname` AS `ITEM_Ticket_22_realname`,
+                        `glpi_users_users_id_recipient`.`id`  AS `ITEM_Ticket_22_id`,
+                        `glpi_users_users_id_recipient`.`firstname` AS `ITEM_Ticket_22_firstname` FROM `glpi_tickets` LEFT JOIN `glpi_tickets_users`  AS `glpi_tickets_users_d1524bb2ea1d461ab90aed3b5f0e7e60`
+                                             ON (`glpi_tickets`.`id` = `glpi_tickets_users_d1524bb2ea1d461ab90aed3b5f0e7e60`.`tickets_id`
+                                                 AND `glpi_tickets_users_d1524bb2ea1d461ab90aed3b5f0e7e60`.`type` = 1 )LEFT JOIN `glpi_users`  AS `glpi_users_a5e2026cbcb683e774f93a59e24a62a4`
+                                          ON (`glpi_tickets_users_d1524bb2ea1d461ab90aed3b5f0e7e60`.`users_id` = `glpi_users_a5e2026cbcb683e774f93a59e24a62a4`.`id`
+                                              ) LEFT JOIN `glpi_tickets_users`  AS `glpi_tickets_users_819efb92c8b927b345e489211ec8e43b`
+                                             ON (`glpi_tickets`.`id` = `glpi_tickets_users_819efb92c8b927b345e489211ec8e43b`.`tickets_id`
+                                                 AND `glpi_tickets_users_819efb92c8b927b345e489211ec8e43b`.`type` = 2 )LEFT JOIN `glpi_users`  AS `glpi_users_f201be21cd638ee780d08cba4ceff0d4`
+                                          ON (`glpi_tickets_users_819efb92c8b927b345e489211ec8e43b`.`users_id` = `glpi_users_f201be21cd638ee780d08cba4ceff0d4`.`id`
+                                              )LEFT JOIN `glpi_itilcategories` 
+                                          ON (`glpi_tickets`.`itilcategories_id` = `glpi_itilcategories`.`id`
+                                              )LEFT JOIN `glpi_users`  AS `glpi_users_users_id_recipient`
+                                          ON (`glpi_tickets`.`users_id_recipient` = `glpi_users_users_id_recipient`.`id`
+                                              ) WHERE  `glpi_tickets`.`is_deleted` = 0  AND (   `glpi_tickets`.`status` IN ('5')  AND (`glpi_users_a5e2026cbcb683e774f93a59e24a62a4`.`id` = '5')   OR (`glpi_users`.`id` = '5')  AND `glpi_tickets`.`status` IN ('5') ) GROUP BY `glpi_tickets`.`id` ORDER BY ITEM_Ticket_19 DESC 
+  Error: Unknown column 'glpi_users.id' in 'where clause'
+  Backtrace :
+  inc/search.class.php:1246                          
+  inc/search.class.php:98                            Search::constructData()
+  inc/search.class.php:80                            Search::showList()
+  front/ticket.php:45                                Search::show()
+  {"user":"5@vps60668"} 
+[2019-11-10 13:18:59] glpisqllog.ERROR: DBmysql::query() in /var/www/clients/client0/web1/web/maintCSPH/inc/dbmysql.class.php line 188
+  *** MySQL query error:
+  SQL: SELECT DISTINCT `glpi_tickets`.`id` AS id, 'normal' AS currentuser,
+                        `glpi_tickets`.`id` AS `ITEM_Ticket_2`,   `glpi_tickets`.`name` AS `ITEM_Ticket_1`,
+                        `glpi_tickets`.`id` AS `ITEM_Ticket_1_id`,
+                        `glpi_tickets`.`id` AS `ITEM_Ticket_1_id`, `glpi_tickets`.`content` AS `ITEM_Ticket_1_content`, `glpi_tickets`.`status` AS `ITEM_Ticket_1_status`, `glpi_tickets`.`status` AS `ITEM_Ticket_12`,  `glpi_tickets`.`date_mod` AS `ITEM_Ticket_19`,  `glpi_tickets`.`date` AS `ITEM_Ticket_15`,  `glpi_tickets`.`priority` AS `ITEM_Ticket_3`,   GROUP_CONCAT(DISTINCT `glpi_users_a5e2026cbcb683e774f93a59e24a62a4`.`id` SEPARATOR '$$##$$')
+                                       AS `ITEM_Ticket_4`,
+                           GROUP_CONCAT(DISTINCT CONCAT(`glpi_tickets_users_d1524bb2ea1d461ab90aed3b5f0e7e60`.`users_id`, ' ',
+                                                        `glpi_tickets_users_d1524bb2ea1d461ab90aed3b5f0e7e60`.`alternative_email`)
+                                                        SEPARATOR '$$##$$') AS `ITEM_Ticket_4_2`, 
+                            GROUP_CONCAT(DISTINCT `glpi_users_f201be21cd638ee780d08cba4ceff0d4`.`id` SEPARATOR '$$##$$')
+                                       AS `ITEM_Ticket_5`,
+                           GROUP_CONCAT(DISTINCT CONCAT(`glpi_tickets_users_819efb92c8b927b345e489211ec8e43b`.`users_id`, ' ',
+                                                        `glpi_tickets_users_819efb92c8b927b345e489211ec8e43b`.`alternative_email`)
+                                                        SEPARATOR '$$##$$') AS `ITEM_Ticket_5_2`, 
+                           `glpi_itilcategories`.`completename` AS `ITEM_Ticket_7`,  `glpi_tickets`.`time_to_resolve` AS `ITEM_Ticket_18`,  `glpi_tickets`.`status` AS `ITEM_Ticket_18_status`,  `glpi_users_users_id_recipient`.`name` AS `ITEM_Ticket_22`,
+                        `glpi_users_users_id_recipient`.`realname` AS `ITEM_Ticket_22_realname`,
+                        `glpi_users_users_id_recipient`.`id`  AS `ITEM_Ticket_22_id`,
+                        `glpi_users_users_id_recipient`.`firstname` AS `ITEM_Ticket_22_firstname` FROM `glpi_tickets` LEFT JOIN `glpi_tickets_users`  AS `glpi_tickets_users_d1524bb2ea1d461ab90aed3b5f0e7e60`
+                                             ON (`glpi_tickets`.`id` = `glpi_tickets_users_d1524bb2ea1d461ab90aed3b5f0e7e60`.`tickets_id`
+                                                 AND `glpi_tickets_users_d1524bb2ea1d461ab90aed3b5f0e7e60`.`type` = 1 )LEFT JOIN `glpi_users`  AS `glpi_users_a5e2026cbcb683e774f93a59e24a62a4`
+                                          ON (`glpi_tickets_users_d1524bb2ea1d461ab90aed3b5f0e7e60`.`users_id` = `glpi_users_a5e2026cbcb683e774f93a59e24a62a4`.`id`
+                                              ) LEFT JOIN `glpi_tickets_users`  AS `glpi_tickets_users_819efb92c8b927b345e489211ec8e43b`
+                                             ON (`glpi_tickets`.`id` = `glpi_tickets_users_819efb92c8b927b345e489211ec8e43b`.`tickets_id`
+                                                 AND `glpi_tickets_users_819efb92c8b927b345e489211ec8e43b`.`type` = 2 )LEFT JOIN `glpi_users`  AS `glpi_users_f201be21cd638ee780d08cba4ceff0d4`
+                                          ON (`glpi_tickets_users_819efb92c8b927b345e489211ec8e43b`.`users_id` = `glpi_users_f201be21cd638ee780d08cba4ceff0d4`.`id`
+                                              )LEFT JOIN `glpi_itilcategories` 
+                                          ON (`glpi_tickets`.`itilcategories_id` = `glpi_itilcategories`.`id`
+                                              )LEFT JOIN `glpi_users`  AS `glpi_users_users_id_recipient`
+                                          ON (`glpi_tickets`.`users_id_recipient` = `glpi_users_users_id_recipient`.`id`
+                                              ) WHERE  `glpi_tickets`.`is_deleted` = 0  AND (   `glpi_tickets`.`status` IN ('5')  AND (`glpi_users_a5e2026cbcb683e774f93a59e24a62a4`.`id` = '5')   OR (`glpi_users`.`id` = '5')  AND `glpi_tickets`.`status` IN ('5') ) GROUP BY `glpi_tickets`.`id` ORDER BY ITEM_Ticket_19 DESC 
+  Error: Unknown column 'glpi_users.id' in 'where clause'
+  Backtrace :
+  inc/search.class.php:1246                          
+  inc/search.class.php:98                            Search::constructData()
+  inc/search.class.php:80                            Search::showList()
+  front/ticket.php:45                                Search::show()
+  {"user":"5@vps60668"} 
+[2019-11-10 13:19:05] glpisqllog.ERROR: DBmysql::query() in /var/www/clients/client0/web1/web/maintCSPH/inc/dbmysql.class.php line 188
+  *** MySQL query error:
+  SQL: SELECT DISTINCT `glpi_tickets`.`id` AS id, 'normal' AS currentuser,
+                        `glpi_tickets`.`id` AS `ITEM_Ticket_2`,   `glpi_tickets`.`name` AS `ITEM_Ticket_1`,
+                        `glpi_tickets`.`id` AS `ITEM_Ticket_1_id`,
+                        `glpi_tickets`.`id` AS `ITEM_Ticket_1_id`, `glpi_tickets`.`content` AS `ITEM_Ticket_1_content`, `glpi_tickets`.`status` AS `ITEM_Ticket_1_status`, `glpi_tickets`.`status` AS `ITEM_Ticket_12`,  `glpi_tickets`.`date_mod` AS `ITEM_Ticket_19`,  `glpi_tickets`.`date` AS `ITEM_Ticket_15`,  `glpi_tickets`.`priority` AS `ITEM_Ticket_3`,   GROUP_CONCAT(DISTINCT `glpi_users_a5e2026cbcb683e774f93a59e24a62a4`.`id` SEPARATOR '$$##$$')
+                                       AS `ITEM_Ticket_4`,
+                           GROUP_CONCAT(DISTINCT CONCAT(`glpi_tickets_users_d1524bb2ea1d461ab90aed3b5f0e7e60`.`users_id`, ' ',
+                                                        `glpi_tickets_users_d1524bb2ea1d461ab90aed3b5f0e7e60`.`alternative_email`)
+                                                        SEPARATOR '$$##$$') AS `ITEM_Ticket_4_2`, 
+                            GROUP_CONCAT(DISTINCT `glpi_users_f201be21cd638ee780d08cba4ceff0d4`.`id` SEPARATOR '$$##$$')
+                                       AS `ITEM_Ticket_5`,
+                           GROUP_CONCAT(DISTINCT CONCAT(`glpi_tickets_users_819efb92c8b927b345e489211ec8e43b`.`users_id`, ' ',
+                                                        `glpi_tickets_users_819efb92c8b927b345e489211ec8e43b`.`alternative_email`)
+                                                        SEPARATOR '$$##$$') AS `ITEM_Ticket_5_2`, 
+                           `glpi_itilcategories`.`completename` AS `ITEM_Ticket_7`,  `glpi_tickets`.`time_to_resolve` AS `ITEM_Ticket_18`,  `glpi_tickets`.`status` AS `ITEM_Ticket_18_status`,  `glpi_users_users_id_recipient`.`name` AS `ITEM_Ticket_22`,
+                        `glpi_users_users_id_recipient`.`realname` AS `ITEM_Ticket_22_realname`,
+                        `glpi_users_users_id_recipient`.`id`  AS `ITEM_Ticket_22_id`,
+                        `glpi_users_users_id_recipient`.`firstname` AS `ITEM_Ticket_22_firstname` FROM `glpi_tickets` LEFT JOIN `glpi_tickets_users`  AS `glpi_tickets_users_d1524bb2ea1d461ab90aed3b5f0e7e60`
+                                             ON (`glpi_tickets`.`id` = `glpi_tickets_users_d1524bb2ea1d461ab90aed3b5f0e7e60`.`tickets_id`
+                                                 AND `glpi_tickets_users_d1524bb2ea1d461ab90aed3b5f0e7e60`.`type` = 1 )LEFT JOIN `glpi_users`  AS `glpi_users_a5e2026cbcb683e774f93a59e24a62a4`
+                                          ON (`glpi_tickets_users_d1524bb2ea1d461ab90aed3b5f0e7e60`.`users_id` = `glpi_users_a5e2026cbcb683e774f93a59e24a62a4`.`id`
+                                              ) LEFT JOIN `glpi_tickets_users`  AS `glpi_tickets_users_819efb92c8b927b345e489211ec8e43b`
+                                             ON (`glpi_tickets`.`id` = `glpi_tickets_users_819efb92c8b927b345e489211ec8e43b`.`tickets_id`
+                                                 AND `glpi_tickets_users_819efb92c8b927b345e489211ec8e43b`.`type` = 2 )LEFT JOIN `glpi_users`  AS `glpi_users_f201be21cd638ee780d08cba4ceff0d4`
+                                          ON (`glpi_tickets_users_819efb92c8b927b345e489211ec8e43b`.`users_id` = `glpi_users_f201be21cd638ee780d08cba4ceff0d4`.`id`
+                                              )LEFT JOIN `glpi_itilcategories` 
+                                          ON (`glpi_tickets`.`itilcategories_id` = `glpi_itilcategories`.`id`
+                                              )LEFT JOIN `glpi_users`  AS `glpi_users_users_id_recipient`
+                                          ON (`glpi_tickets`.`users_id_recipient` = `glpi_users_users_id_recipient`.`id`
+                                              ) WHERE  `glpi_tickets`.`is_deleted` = 0  AND (   `glpi_tickets`.`status` IN ('5')  AND (`glpi_users_a5e2026cbcb683e774f93a59e24a62a4`.`id` = '5')   OR (`glpi_users`.`id` = '5')  AND `glpi_tickets`.`status` IN ('5') ) GROUP BY `glpi_tickets`.`id` ORDER BY ITEM_Ticket_19 DESC 
+  Error: Unknown column 'glpi_users.id' in 'where clause'
+  Backtrace :
+  inc/search.class.php:1246                          
+  inc/search.class.php:98                            Search::constructData()
+  inc/search.class.php:80                            Search::showList()
+  front/ticket.php:45                                Search::show()
+  {"user":"5@vps60668"} 
+[2019-11-11 22:46:54] glpisqllog.ERROR: DBmysql::query() in /var/www/clients/client0/web1/web/maintCSPH/inc/dbmysql.class.php line 188
+  *** MySQL query error:
+  SQL: 
+  Error: 
+  Backtrace :
+  inc/rulecollection.class.php:773                   
+  front/rule.common.form.php:77                      RuleCollection->deleteRuleOrder()
+  front/ruleright.form.php:37                        include()
+  {"user":"2@vps60668","mem_usage":"0.000\", 1.61Mio)"} 
+[2019-11-19 12:14:22] glpisqllog.ERROR: DBmysql::query() in /var/www/clients/client0/web1/web/maintCSPH/inc/dbmysql.class.php line 188
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_locations` (`entities_id`, `is_recursive`, `name`, `comment`, `locations_id`, `address`, `postcode`, `town`, `state`, `country`, `building`, `room`, `latitude`, `longitude`, `altitude`, `level`, `completename`, `date_creation`, `date_mod`) VALUES ('0', '0', 'Hall', 'Hall Rez de Chaussé Haut ', '2', '', '', '', '', '', '', '', '', '', '', '2', 'RCH > Hall', '2019-11-19 12:14:22', '2019-11-19 12:14:22')
+  Error: Duplicate entry '0-2-Hall' for key 'unicity'
+  Backtrace :
+  inc/dbmysql.class.php:832                          
+  inc/commondbtm.class.php:659                       DBmysql->insert()
+  inc/commondbtm.class.php:1141                      CommonDBTM->addToDB()
+  front/dropdown.common.form.php:59                  CommonDBTM->add()
+  front/location.form.php:36                         include()
+  {"user":"2@vps60668"} 
+[2019-11-20 08:43:25] glpisqllog.ERROR: DBmysql::query() in /var/www/clients/client0/web1/web/maintCSPH/inc/dbmysql.class.php line 188
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_locations` (`entities_id`, `is_recursive`, `name`, `comment`, `locations_id`, `address`, `postcode`, `town`, `state`, `country`, `building`, `room`, `latitude`, `longitude`, `altitude`, `level`, `completename`, `date_creation`, `date_mod`) VALUES ('0', '0', 'Toilette homme', '', '27', '', '', '', '', '', '', '', '', '', '', '3', 'Niveau 4 > Ail Droite > Toilette homme', '2019-11-20 08:43:25', '2019-11-20 08:43:25')
+  Error: Duplicate entry '0-27-Toilette homme' for key 'unicity'
+  Backtrace :
+  inc/dbmysql.class.php:832                          
+  inc/commondbtm.class.php:659                       DBmysql->insert()
+  inc/commondbtm.class.php:1141                      CommonDBTM->addToDB()
+  front/dropdown.common.form.php:59                  CommonDBTM->add()
+  front/location.form.php:36                         include()
+  {"user":"2@vps60668"} 
+[2019-11-20 09:48:50] glpisqllog.ERROR: DBmysql::query() in /var/www/clients/client0/web1/web/maintCSPH/inc/dbmysql.class.php line 188
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_locations` (`entities_id`, `is_recursive`, `name`, `comment`, `locations_id`, `address`, `postcode`, `town`, `state`, `country`, `building`, `room`, `latitude`, `longitude`, `altitude`, `level`, `completename`, `date_creation`, `date_mod`) VALUES ('0', '0', '', '', '3', '', '', '', '', '', '', '128', '', '', '', '2', 'Niveau 1 > ', '2019-11-20 09:48:50', '2019-11-20 09:48:50')
+  Error: Duplicate entry '0-3-' for key 'unicity'
+  Backtrace :
+  inc/dbmysql.class.php:832                          
+  inc/commondbtm.class.php:659                       DBmysql->insert()
+  inc/commondbtm.class.php:1141                      CommonDBTM->addToDB()
+  front/dropdown.common.form.php:59                  CommonDBTM->add()
+  front/location.form.php:36                         include()
+  {"user":"2@vps60668"} 
+[2019-11-20 09:49:08] glpisqllog.ERROR: DBmysql::query() in /var/www/clients/client0/web1/web/maintCSPH/inc/dbmysql.class.php line 188
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_locations` (`entities_id`, `is_recursive`, `name`, `comment`, `locations_id`, `address`, `postcode`, `town`, `state`, `country`, `building`, `room`, `latitude`, `longitude`, `altitude`, `level`, `completename`, `date_creation`, `date_mod`) VALUES ('0', '0', '', '', '0', '', '', '', '', '', '', '108', '', '', '', '1', '', '2019-11-20 09:49:08', '2019-11-20 09:49:08')
+  Error: Duplicate entry '0-0-' for key 'unicity'
+  Backtrace :
+  inc/dbmysql.class.php:832                          
+  inc/commondbtm.class.php:659                       DBmysql->insert()
+  inc/commondbtm.class.php:1141                      CommonDBTM->addToDB()
+  front/dropdown.common.form.php:59                  CommonDBTM->add()
+  front/location.form.php:36                         include()
+  {"user":"2@vps60668"} 
+[2019-11-30 11:51:56] glpisqllog.ERROR: DBmysql::query() in /var/www/clients/client0/web1/web/maintCSPH/inc/dbmysql.class.php line 188
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_logs` (`items_id`, `itemtype`, `itemtype_link`, `linked_action`, `user_name`, `date_mod`, `id_search_option`, `old_value`, `new_value`) VALUES ('1', 'Config', '', '0', 'Elie Matchémé (2)', '2019-11-30 11:51:55', '1', 'priority_matrix {\"1\":{\"1\":\"1\",\"2\":\"1\",\"3\":\"2\",\"4\":\"2\",\"5\":\"2\"},\"2\":{\"1\":\"1\",\"2\":\"2\",\"3\":\"2\",\"4\":\"3\",\"5\":\"3\"},\"3\":{\"1\":\"2\",\"2\":\"2\",\"3\":\"3\",\"4\":\"4\",\"5\":\"4\"},\"4\":{\"1\":\"2\",\"2\":\"3\', '{\"1\":{\"1\":\"1\",\"2\":\"1\",\"3\":\"2\",\"4\":\"2\",\"5\":\"2\"},\"2\":{\"1\":\"1\",\"2\":\"2\",\"3\":\"2\",\"4\":\"3\",\"5\":\"3\"},\"3\":{\"1\":\"2\",\"2\":\"2\",\"3\":\"3\",\"4\":\"4\",\"5\":\"4\"},\"4\":{\"1\":\"2\",\"2\":\"3\",\"3\":\"4\",\"')
+  Error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '{\"1\":{\"1\":\"1\",\"2\":\"1\",\"3\":\"2\",\"4\":\"2\",\"5\":\"2\"},\"2\":{\"1\' at line 1
+  Backtrace :
+  inc/dbmysql.class.php:832                          
+  inc/log.class.php:233                              DBmysql->insert()
+  inc/log.class.php:169                              Log::history()
+  inc/config.class.php:3390                          Log::constructHistory()
+  inc/commondbtm.class.php:1475                      Config->post_updateItem()
+  inc/config.class.php:2866                          CommonDBTM->update()
+  inc/config.class.php:247                           Config::setConfigurationValues()
+  inc/commondbtm.class.php:1363                      Config->prepareInputForUpdate()
+  front/config.form.php:43                           CommonDBTM->update()
+  {"user":"2@vps60668"} 

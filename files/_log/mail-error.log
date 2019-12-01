@@ -1,0 +1,18 @@
+2019-11-18 19:34:51 [14@vps60668]
+Attention : un courriel n'a pas pu être délivré à maintcsph@gmail.com. 5 tentatives restantes. Message : [GLPI #0000021] Nouveau ticket Fenêtre cassée, Erreur : SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+2019-11-24 21:10:46 [2@vps60668]
+Attention : un courriel n'a pas pu être délivré à eliematcheme@gmail.com. 5 tentatives restantes. Message : [GLPI #0000021] Nouveau ticket Fenêtre cassée, Erreur : SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+2019-11-24 21:10:46 [2@vps60668]
+Attention : un courriel n'a pas pu être délivré à maintcsph@gmail.com. 4 tentatives restantes. Message : [GLPI #0000021] Nouveau ticket Fenêtre cassée, Erreur : SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+2019-11-25 18:56:43 [@vps60668]
+Attention : un courriel n'a pas pu être délivré à maintcsph@gmail.com. 3 tentatives restantes. Message : [GLPI #0000021] Nouveau ticket Fenêtre cassée, Erreur : SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+2019-11-25 18:56:49 [@vps60668]
+Attention : un courriel n'a pas pu être délivré à eliematcheme@gmail.com. 4 tentatives restantes. Message : [GLPI #0000021] Nouveau ticket Fenêtre cassée, Erreur : SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+2019-11-26 06:50:55 [14@vps60668]
+Attention : un courriel n'a pas pu être délivré à maintcsph@gmail.com. 5 tentatives restantes. Message : [GLPI #0000032] Nouveau ticket ordinateur gaté, Erreur : SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+2019-11-26 06:54:41 [2@vps60668]
+Attention : un courriel n'a pas pu être délivré à eliematcheme@gmail.com. 5 tentatives restantes. Message : [GLPI #0000032] Nouveau ticket ordinateur gaté, Erreur : SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+2019-11-26 06:57:25 [2@vps60668]
+Attention : un courriel n'a pas pu être délivré à maintcsph@gmail.com. 5 tentatives restantes. Message : [GLPI #0000032] Nouveau suivi ordinateur gaté, Erreur : SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+2019-11-26 07:05:19 [14@vps60668]
+Attention : un courriel n'a pas pu être délivré à maintcsph@gmail.com. 5 tentatives restantes. Message : [GLPI #0000032] Clôture du ticket ordinateur gaté, Erreur : SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
