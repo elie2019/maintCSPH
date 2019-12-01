@@ -286,7 +286,7 @@ if (!file_exists(GLPI_CONFIG_DIR . "/config_db.php")) {
 	   }
 
 	   echo "<div id='footer-login'>\n";
-	   echo "<a href='smicam.com/maintCSPH' title='Plateforme de maintenance de la CSPH' style='color:#fff;'>";
+	   echo "<a href='#' title='Plateforme de maintenance de la CSPH' style='color:#fff;'>";
 	   echo "maintCSPH Copyright (C) 2018 - ".date('Y')." Developpé par Smart Market International";
 	   echo "</a></div>\n"; 
 	?>       
