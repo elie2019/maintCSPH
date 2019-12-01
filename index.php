@@ -286,8 +286,8 @@ if (!file_exists(GLPI_CONFIG_DIR . "/config_db.php")) {
 	   }
 
 	   echo "<div id='footer-login'>\n";
-	   echo "<a href='http://glpi-project.org/' title='Powered By Teclib' style='color:#fff;'>";
-	   echo "GLPI Copyright (C) 2015 - ".date('Y')." Teclib and contributors - Copyright (C) 2003 - 2015 INDEPNET Development Team";
+	   echo "<a href='smicam.com/maintCSPH' title='Plateforme de maintenance de la CSPH' style='color:#fff;'>";
+	   echo "maintCSPH Copyright (C) 2018 - ".date('Y')." Develped by - Copyright (C) 2017 - 2018 Smart Market International";
 	   echo "</a></div>\n"; 
 	?>       
         
